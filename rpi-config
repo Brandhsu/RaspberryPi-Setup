@@ -1,0 +1,14 @@
+# SSH setup
+https://carmalou.com/how-to/2017/08/06/how-to-change-hostname-for-raspberry-pi.html
+
+If you are using ssh shortcuts for your Raspberry Pi, it can be a good idea to give each pi you set up a unique hostname. If you are using the raspian distribution from raspberrypi.org, raspberrypi.local is the default hostname.
+
+Since IP addresses can change, it’s not good to use this in your ssh config file. So instead, I’ll show you how to change the hostname to be unique on each different pi.
+
+First, while ssh’d into the pi, use: the hostname command. This will show you what the current hostname of the pi is.
+
+Next use sudo nano /etc/hosts and change the hostname in that file. (It’s listed next to the IP address.)
+
+Then use sudo nano /etc/hostname and change the hostname in this file.
+
+Lastly, use reboot to restart the pi and ssh back in using the new hostname and voila!
